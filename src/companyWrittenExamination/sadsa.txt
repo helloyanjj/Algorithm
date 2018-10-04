@@ -1,0 +1,122 @@
+第一题（图的遍历）：
+
+
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 100007;
+const int INF = 0x3f3f3f3f;
+int n;
+struct md
+{
+    int nxt;
+    int v;
+}edge[N<<1];
+int head[N],cnt;
+bool vis[N];
+int ans = 0;
+void ini()
+{
+
+    memset(head,-1,sizeof head);
+    cnt = 0;
+}
+void add_edge(int a,int b )
+{
+    edge[cnt].v = b;
+    edge[cnt].nxt = head[a];
+    head[a] = cnt++;
+}
+void dfs(int x,int dep)
+{
+    vis[x] = 1;
+    ans = max (ans,dep);
+    for (int i=head[x];~i;i=edge[i].nxt)
+    {
+        int e = edge[i].v ;
+        if (vis[e])
+            continue;
+        dfs(e,dep+1);
+    }
+}
+int main()
+{
+    while (~scanf("%d",&n))
+    {
+        ini();
+        for (int i=0;i<n-1;i++)
+        {
+            int a,b;
+            scanf("%d%d",&a,&b);
+            add_edge(a,b);
+            add_edge(b,a);
+        }
+        ans = 0;
+        memset(vis,0,sizeof vis);
+        dfs(1,0);
+        printf("%d\n",2*(n-1)-ans);
+    }
+    return 0;
+}
+
+
+第二题（伪DP）：
+方案一：
+
+#include<bits/stdc++.h>
+using namespace std;
+int s[310000];
+int sum[310000];
+int main()
+{
+    int n,k;
+    cin>>n>>k;
+    for(int i=1;i<=n;++i)
+        cin>>s[i];
+    for(int i=1;i<=n;++i)
+    {
+        sum[i]=(1-s[i])+sum[i-1];
+    }
+    int p1=1,p2=0;
+    while(p2+1<=n && sum[p2+1]-sum[p1-1]<=k)
+    {
+        p2++;
+    }
+    int ans=p2-p1+1;
+    while(p1<=n && p2<=n)
+    {
+        p1++;
+        while(p2+1<=n && sum[p2+1]-sum[p1-1]<=k)
+            p2++;
+        ans=max(ans,p2-p1+1);
+    }
+    cout<<ans<<endl;
+}
+
+方案二
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> G[100010];
+
+int dfs(int u, int fa) {
+    int ans = 0;
+    for (int v: G[u]) if (v != fa) {
+        ans = max(ans, dfs(v, u) + 1);
+    }
+    return ans;
+}
+
+int main(void) {
+    int n;
+    cin >> n;
+    for (int i = 1; i < n; ++ i) {
+        int u, v;
+        cin >> u >> v;
+        G[u].push_back(v);
+        G[v].push_back(u);
+    }
+
+    cout << (n - 1) * 2 - dfs(1, 0) << endl;
+
+    return 0;
+}
