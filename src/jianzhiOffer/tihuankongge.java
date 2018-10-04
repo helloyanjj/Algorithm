@@ -1,10 +1,10 @@
 package jianzhiOffer;
 
-import java.util.Scanner;
+
 
 public class tihuankongge {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println(resolve("We Are Happy."));
     }
 

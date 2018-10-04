@@ -6,7 +6,7 @@ import java.util.Map;
 public class hashmap {
 
     public static void main(String[] args) {
-        int [] a = {2,3,4,4,3,3,5,4,3,4,5,3,5,6,6,6,6,6,6,6,6,6,6};
+        int [] a = {2,3,4,4,3,3,5,4,3,4,5,3,5,7,6,6,6,6,6,6,6,6,6,6};
         Map<Integer,Integer> map = new HashMap();
         int len = a.length;
         for (int m:a) {

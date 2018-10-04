@@ -1,6 +1,5 @@
 package jianzhiOffer;
 
-import java.util.Scanner;
 
 /**
  * 线程安全懒汉模式
