@@ -1,11 +1,10 @@
 package jianzhiOffer;
 
-import java.util.Scanner;
 import java.util.Stack;
 
 public class dayinliaobiao {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         listNode node1=new listNode();
         listNode node2=new listNode();
         listNode node3=new listNode();
@@ -26,6 +25,13 @@ public class dayinliaobiao {
         while (!stack.isEmpty()) {
             System.out.println(stack.pop().data);
         }
+//        递归方式
+//        if (headNode != null) {
+//            if (headNode.next != null) {
+//                printListReverse(headNode.next);
+//            }
+//            System.out.println(headNode.data);
+//        }
     }
 }
 
