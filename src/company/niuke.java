@@ -13,18 +13,18 @@ public class niuke {
         int f = scanner.nextInt();
         int d = scanner.nextInt();
         int p = scanner.nextInt();
-        resolve(x,f,d,p);
+        resolve(x, f, d, p);
 
 
     }
 
-    public static void resolve(int x,int f,int d,int p) {
-        int d1 = d/x;
+    public static void resolve(int x, int f, int d, int p) {
+        int d1 = d / x;
         int yu = d - x * f;
-        if (d1<=f) {
+        if (d1 <= f) {
             System.out.println(d1);
-        } else if (d1>f){
-            System.out.println(f+yu/(x+p));
+        } else if (d1 > f) {
+            System.out.println(f + yu / (x + p));
         }
 
     }

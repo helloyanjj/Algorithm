@@ -13,7 +13,6 @@ public class tengxun1 {
     }
 
 
-
     private static int resolve(int n) {
 //        int m = n + 1;
 //        while (m<10000) {
@@ -37,28 +36,25 @@ public class tengxun1 {
 //        }
 
 
-
         return 8;
     }
 
-    private static int resolve2(int n,int[] a, int sum) {
+    private static int resolve2(int n, int[] a, int sum) {
 
-        for (int i=n;i<sum;i++) {
+        for (int i = n; i < sum; i++) {
             Set set = new HashSet();
-            for (int j=0;j<a.length;j++){
-                if (i%a[j] == 0){
+            for (int j = 0; j < a.length; j++) {
+                if (i % a[j] == 0) {
                     set.add(1);
                 }
             }
-            if (set.size() == 1){
+            if (set.size() == 1) {
                 return i;
             }
         }
         return 0;
 
     }
-
-
 
 
 }

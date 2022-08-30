@@ -20,7 +20,6 @@ public class wangyi1_2 {
     }
 
 
-
     private boolean compareString(String param1, String param2) {
 
         char[] paramC1 = param1.toCharArray();

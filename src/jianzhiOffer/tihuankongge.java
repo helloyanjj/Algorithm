@@ -1,7 +1,6 @@
 package jianzhiOffer;
 
 
-
 public class tihuankongge {
     public static void main(String[] args) {
 
@@ -12,9 +11,9 @@ public class tihuankongge {
         StringBuffer str = new StringBuffer(string);
         int len = string.length();
         char[] a = string.toCharArray();
-        for (int i=0;i<len;i++) {
+        for (int i = 0; i < len; i++) {
             if (str.charAt(i) == ' ') {
-                str.replace(i,i+1, "%20");
+                str.replace(i, i + 1, "%20");
             }
         }
 

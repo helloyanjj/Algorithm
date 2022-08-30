@@ -7,11 +7,11 @@ import java.util.*;
  */
 public class niukewangyi1 {
 
-    public static void ss (int n,int m,int []c) {
-        Map<Integer,Integer > map = new HashMap();
-        for (int i=0;i<m;i++) {
+    public static void ss(int n, int m, int[] c) {
+        Map<Integer, Integer> map = new HashMap();
+        for (int i = 0; i < m; i++) {
             Integer s = map.get(c[i]);
-            if (s==null) {
+            if (s == null) {
                 s = 1;
                 map.put(c[i], s);
             } else {
@@ -21,10 +21,10 @@ public class niukewangyi1 {
         }
 
         Set set = map.entrySet();
-        Iterator  it = set.iterator();
+        Iterator it = set.iterator();
         int min = map.get(c[0]);
         while (it.hasNext()) {
-            java.util.Map.Entry <Integer, Integer> entry = (Map.Entry<Integer, Integer>)it.next();
+            java.util.Map.Entry<Integer, Integer> entry = (Map.Entry<Integer, Integer>) it.next();
             if (min > entry.getValue()) {
                 min = entry.getValue();
             }
@@ -32,7 +32,7 @@ public class niukewangyi1 {
         if (map.size() == n) {
             System.out.println(min);
         } else
-        System.out.println(0);
+            System.out.println(0);
     }
 
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class niukewangyi1 {
         int n = scanner.nextInt();
         int m = scanner.nextInt();
         int[] c = new int[m];
-        for (int i=0;i<m;i++) {
+        for (int i = 0; i < m; i++) {
             c[i] = scanner.nextInt();
         }
         ss(n, m, c);

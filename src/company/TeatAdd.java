@@ -7,7 +7,7 @@ public class TeatAdd {
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int x = 0, y = 0, carry = 0,aa = 0;
+        int x = 0, y = 0, carry = 0, aa = 0;
         ListNode p1 = l1;
         ListNode p2 = l2;
         ListNode result = new ListNode(0);
@@ -19,15 +19,18 @@ public class TeatAdd {
             aa = sum / 10;
             result.val = cc;
             result = result.next;
-            if(p1!=null)p1 = p1.next;
-            if(p2!=null)p2 = p2.next;
+            if (p1 != null) p1 = p1.next;
+            if (p2 != null) p2 = p2.next;
         }
         return result;
     }
 
     public class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 }

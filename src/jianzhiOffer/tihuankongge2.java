@@ -13,21 +13,21 @@ public class tihuankongge2 {
         char[] a = string.toCharArray();
         int len = a.length;
         int num = 0;
-        for (char c:a) {
-            if (c==' ') {
+        for (char c : a) {
+            if (c == ' ') {
                 num = num + 3;
             }
         }
-        char[]b = new char[len+num];
-        int len2 = len+num;
+        char[] b = new char[len + num];
+        int len2 = len + num;
 
-        for (int i=0;i<len;i++) {
+        for (int i = 0; i < len; i++) {
             b[i] = a[i];
         }
-        int j = len2-1;
-        for (int i=len-1;i>=0;i--) {
+        int j = len2 - 1;
+        for (int i = len - 1; i >= 0; i--) {
 
-            if (b[i] != ' ' && j>i) {
+            if (b[i] != ' ' && j > i) {
                 b[j--] = b[i];
                 continue;
             } else {

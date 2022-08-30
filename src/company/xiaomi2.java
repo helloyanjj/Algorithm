@@ -13,10 +13,11 @@ public class xiaomi2 {
         return 0;
 
     }
+
     /******************************结束写代码******************************/
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int res;
 
@@ -24,7 +25,7 @@ public class xiaomi2 {
         _array_size = Integer.parseInt(in.nextLine().trim());
         int[] _array = new int[_array_size];
         int _array_item;
-        for(int _array_i = 0; _array_i < _array_size; _array_i++) {
+        for (int _array_i = 0; _array_i < _array_size; _array_i++) {
             _array_item = Integer.parseInt(in.nextLine().trim());
             _array[_array_i] = _array_item;
         }

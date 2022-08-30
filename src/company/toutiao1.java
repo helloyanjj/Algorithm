@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class toutiao1 {
 
-    public static void resolve (String s) {
+    public static void resolve(String s) {
 //        char[] a = s.toCharArray();
 
 //        int max = 1;
@@ -26,19 +26,19 @@ public class toutiao1 {
         int i, j;
         String count = "";
         String ss;
-        for(i=0;i<len;i++) {
+        for (i = 0; i < len; i++) {
 
-            for(j=i+1;j<=len;j++){
+            for (j = i + 1; j <= len; j++) {
 
                 ss = s.substring(i, j);
-                if(j == len){
-                    if(count.length() < ss.length()){
+                if (j == len) {
+                    if (count.length() < ss.length()) {
                         count = ss;
                     }
                     break;
                 } else {
-                    if(ss.contains(s.substring(j, j+1))){
-                        if(count.length() < ss.length()){
+                    if (ss.contains(s.substring(j, j + 1))) {
+                        if (count.length() < ss.length()) {
                             count = ss;
                         }
                         break;

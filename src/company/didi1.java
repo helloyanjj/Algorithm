@@ -47,35 +47,32 @@ public class didi1 {
         int len = s.length;
         int len1 = s[0].length();
         char[] chars = s[1].toCharArray();
-        int [] fen = new int[len];
-        for (int i=1;i<len;i++) {
+        int[] fen = new int[len];
+        for (int i = 1; i < len; i++) {
             char[] q = s[1].toCharArray();
             if (q.length == len1) {
-                for (int j=0;j<len1;j++) {
+                for (int j = 0; j < len1; j++) {
                     if (chars[j] == q[j]) {
                         continue;
                     } else {
                         if ((a.contains(chars[j]) && a.contains(q[j]))
-                                || (b.contains(chars[j]) && b.contains(q[j])) ) {
-                            fen[i-1] = fen[i-1] + 1;
-                        } else fen[i-1] = fen[i-1] + 2;
+                                || (b.contains(chars[j]) && b.contains(q[j]))) {
+                            fen[i - 1] = fen[i - 1] + 1;
+                        } else fen[i - 1] = fen[i - 1] + 2;
                     }
                 }
             } else if (q.length > len1) {
-                fen[i-1] = fen[i-1] + 3*(q.length - len1);
+                fen[i - 1] = fen[i - 1] + 3 * (q.length - len1);
             } else if (q.length < len1) {
-                fen[i-1] = fen[i-1] + 3*(len1 - q.length);
+                fen[i - 1] = fen[i - 1] + 3 * (len1 - q.length);
             }
 
 
-
         }
 
-        for (int i=0;i<len;i++) {
+        for (int i = 0; i < len; i++) {
             System.out.println(fen[i]);
         }
-
-
 
 
 //        System.out.println("slep slap step");

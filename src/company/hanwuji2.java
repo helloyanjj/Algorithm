@@ -10,9 +10,9 @@ public class hanwuji2 {
     }
 
     private static long resolve(long t) {
-        long sum = 3,num = 3;
+        long sum = 3, num = 3;
 
-        if (t<=3) {
+        if (t <= 3) {
             return 3 - t + 1;
         }
 
@@ -22,6 +22,6 @@ public class hanwuji2 {
         }
         num = num - sum;
 
-        return sum - (t - num) + 1 ;
+        return sum - (t - num) + 1;
     }
 }

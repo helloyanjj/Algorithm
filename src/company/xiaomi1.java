@@ -13,27 +13,27 @@ public class xiaomi1 {
                 break;
             } else a[i++] = str;
         }
-        resolve(a,i);
+        resolve(a, i);
     }
 
-    private static void resolve(String[] a,int n) {
-        int []ten = new int[n];
+    private static void resolve(String[] a, int n) {
+        int[] ten = new int[n];
 
-        for (int i=0;i<n;i++) {
+        for (int i = 0; i < n; i++) {
             String[] one = a[i].split("\\#");
-            ten[i] = Integer.parseInt(one[1].toString(),Integer.parseInt(one[0]));
+            ten[i] = Integer.parseInt(one[1].toString(), Integer.parseInt(one[0]));
 
         }
         boolean aaa = false;
-        for (int i=0;i<n-1;i++) {
-            for (int j=0;j<n;j++) {
-                if (i==j){
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == j) {
                     continue;
                 }
                 if (ten[i] == ten[j]) {
                     break;
                 }
-                if (j == n-1) {
+                if (j == n - 1) {
                     aaa = true;
                     System.out.println(a[i]);
                 }
@@ -43,7 +43,6 @@ public class xiaomi1 {
         if (aaa == false) {
             System.out.println("None");
         }
-
 
 
     }

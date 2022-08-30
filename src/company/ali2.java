@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ali2 {
 
-    public static void resolve (String s0, String s) {
+    public static void resolve(String s0, String s) {
         System.out.println("yes,0");
     }
 

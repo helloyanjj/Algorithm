@@ -2,28 +2,28 @@ package company;
 
 public class wangyi1_1 {
 
-    public static void ss (int n,int[]a,int m ,int[]q) {
-        int []answer = new int[m];
+    public static void ss(int n, int[] a, int m, int[] q) {
+        int[] answer = new int[m];
 
-        for (int i=0;i<m;i++) {
+        for (int i = 0; i < m; i++) {
             int qq = q[i];
-            int j=0;
+            int j = 0;
 //            int [] b = new int[n];
 //            for (int w=0;w<n;w++){
 //                b[w] = a[w];
 //            }
-            int []b = a.clone();
+            int[] b = a.clone();
 
-            while (qq>b[j]) {
+            while (qq > b[j]) {
                 j++;
-                b[j] = b[j-1] + b[j];
+                b[j] = b[j - 1] + b[j];
 
             }
             answer[i] = j + 1;
 
         }
 
-        for (int i=0;i<m;i++) {
+        for (int i = 0; i < m; i++) {
             System.out.println(answer[i]);
 
         }
@@ -50,12 +50,10 @@ public class wangyi1_1 {
         Integer i = 1;
         Integer j = 2;
 
-        System.out.println(i.compareTo(j)<0);
+        System.out.println(i.compareTo(j) < 0);
 
 
     }
-
-
 
 
 }

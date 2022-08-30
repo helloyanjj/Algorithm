@@ -14,7 +14,8 @@ class TreeNode {
     TreeNode leftNode;
     TreeNode rightNode;
     TreeNode parentNode;
-    TreeNode (int value) {
+
+    TreeNode(int value) {
         this.value = value;
     }
 }
@@ -32,7 +33,7 @@ public class GetNext {
                 rightTree = rightTree.leftNode;
             }
             nextNode = rightTree;
-        }else if (treeNode.parentNode != null) {
+        } else if (treeNode.parentNode != null) {
             TreeNode currentNode = treeNode;
             TreeNode parentNode = treeNode.parentNode;
             if (parentNode != null && currentNode == parentNode.rightNode) {

@@ -20,24 +20,24 @@ public class beike1 {
         StringBuffer s2 = new StringBuffer();
         int len = string.length();
         int n = 0;
-        for (int i = 0;i<len;i++) {
+        for (int i = 0; i < len; i++) {
             if (string.charAt(i) == '+' || string.charAt(i) == '-') {
                 n++;
             }
         }
-        int []t = new int[n];
+        int[] t = new int[n];
         int j = 0;
-        for (int i = 0;i<len;i++) {
+        for (int i = 0; i < len; i++) {
             StringBuffer s1 = new StringBuffer();
             if (string.charAt(i) != '+' || string.charAt(i) != '-') {
                 s1.append(string.charAt(i));
             } else {
                 s2.append(string.charAt(i));
                 if (s1.charAt(0) == '0' && s1.charAt(1) == 'x') {
-                    t[j++] = Integer.parseInt(s1.toString(),16);
+                    t[j++] = Integer.parseInt(s1.toString(), 16);
 
                 } else if (s1.charAt(0) == '0') {
-                    t[j++] = Integer.parseInt(s1.toString(),8);
+                    t[j++] = Integer.parseInt(s1.toString(), 8);
 
                 } else {
                     t[j++] = Integer.parseInt(s1.toString());
@@ -47,8 +47,8 @@ public class beike1 {
         }
         int sum = 0;
         System.out.println(t[1]);
-        for (int i=0;i<n-1;i++) {
-            sum = t[i]  + t[i+1];
+        for (int i = 0; i < n - 1; i++) {
+            sum = t[i] + t[i + 1];
         }
         return sum;
     }

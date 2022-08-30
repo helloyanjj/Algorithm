@@ -9,9 +9,10 @@ public class SingletonDemo2 {
         private static SingletonDemo2 singletonDemo2 = new SingletonDemo2();
     }
 
-    private SingletonDemo2() { }
+    private SingletonDemo2() {
+    }
 
-    public static SingletonDemo2 getInstance () {
+    public static SingletonDemo2 getInstance() {
         return Holder.singletonDemo2;
     }
 

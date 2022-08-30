@@ -2,41 +2,39 @@
 package company;
 
 
-
 import java.util.Scanner;
-
 
 
 public class pinduoduo2 {
 
     public static void main(String[] args) {
 
-        int a[][]=new int[100][100];
+        int a[][] = new int[100][100];
 
         int n;
 
-        Scanner in=new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-        n=in.nextInt();
+        n = in.nextInt();
 
         int m = in.nextInt();
-        m = m+1;
+        m = m + 1;
 
         //跳过这行换行符
 
         in.nextLine();
 
-        for(int i=1;i<=n;i++){
+        for (int i = 1; i <= n; i++) {
 
             String strLine = in.nextLine();
 
             Scanner s = new Scanner(strLine);
 
-            int j=0;
+            int j = 0;
 
-            while(s.hasNextInt()){
+            while (s.hasNextInt()) {
 
-                a[i][j++]=s.nextInt()+1;
+                a[i][j++] = s.nextInt() + 1;
 
             }
 
@@ -57,30 +55,30 @@ public class pinduoduo2 {
 //            System.out.println();
 //
 //        }
-        int j=0;
+        int j = 0;
         int max = 0;
         int aaaaaamax = 0;
         int lie = 0;
         int bb[] = new int[1000000000];
-        while( a[m][j] !=0 )
-        bb[j] = a[m][j++];
+        while (a[m][j] != 0)
+            bb[j] = a[m][j++];
 //        int bb[] = new int[j];
 //        for (int i=0;i<j;i++){
 //            bb[i] = a[m][i];
 //        }
-        for (int i=1;i<=n;i++) {
+        for (int i = 1; i <= n; i++) {
 
         }
 
-        for(int i=1;i<=n;i++){
-            for (int p=0;p<j;p++){
-                if(i==m){
+        for (int i = 1; i <= n; i++) {
+            for (int p = 0; p < j; p++) {
+                if (i == m) {
                     continue;
                 }
-                for(int k=1;k<=n;k++){
-                    if(bb[p]==a[i][k]){
+                for (int k = 1; k <= n; k++) {
+                    if (bb[p] == a[i][k]) {
                         aaaaaamax++;
-                        if(max<aaaaaamax){
+                        if (max < aaaaaamax) {
                             max = aaaaaamax;
                             lie = i;
                         }
@@ -92,12 +90,10 @@ public class pinduoduo2 {
             }
 
         }
-        System.out.println(lie-1);
-
+        System.out.println(lie - 1);
 
 
     }
-
 
 
 }

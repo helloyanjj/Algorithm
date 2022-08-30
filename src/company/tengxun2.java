@@ -7,12 +7,12 @@ public class tengxun2 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int m = scanner.nextInt();
-        int [][]a = new int[m][2];
-        for (int i=0;i<m;i++) {
+        int[][] a = new int[m][2];
+        for (int i = 0; i < m; i++) {
             a[i][0] = scanner.nextInt();
             a[i][1] = scanner.nextInt();
         }
-        System.out.println(resolve(n,m,a));
+        System.out.println(resolve(n, m, a));
     }
 
     private static int resolve(int n, int m, int[][] a) {

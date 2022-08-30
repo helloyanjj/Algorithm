@@ -5,14 +5,14 @@ import java.util.Stack;
 public class dayinliaobiao {
     public static void main(String[] args) {
 
-        listNode node1=new listNode();
-        listNode node2=new listNode();
-        listNode node3=new listNode();
-        node1.data=1;
-        node2.data=2;
-        node3.data=3;
-        node1.next=node2;
-        node2.next=node3;
+        listNode node1 = new listNode();
+        listNode node2 = new listNode();
+        listNode node3 = new listNode();
+        node1.data = 1;
+        node2.data = 2;
+        node3.data = 3;
+        node1.next = node2;
+        node2.next = node3;
         printListReverse(node1);
     }
 

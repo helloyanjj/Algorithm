@@ -24,30 +24,28 @@ public class aiqiyi2 {
 //        return 5+aun;
 
 
-
 //        int sum = 0;
 //        for (int i=1;i<n;i=i+2) {
 //            sum = sum + (n-i)*(n-(i+1))/2;
 //        }
 //        return sum + 1 + n;
-        int res = 0,len = n,c = 0;
-        for (int i=0;i<len;i++) {
-            if (i<=0.5*(len+1)) {
-                c = getNF(len-i+1)/getNF(i)/getNF(len-2*i+1);
+        int res = 0, len = n, c = 0;
+        for (int i = 0; i < len; i++) {
+            if (i <= 0.5 * (len + 1)) {
+                c = getNF(len - i + 1) / getNF(i) / getNF(len - 2 * i + 1);
             }
-            res = res+c;
+            res = res + c;
         }
         return res;
-
 
 
     }
 
     public static int getNF(int n) {
-        if(n==0) {
+        if (n == 0) {
             return 1;
         }
-        return n*getNF(n-1);
+        return n * getNF(n - 1);
     }
 
 }

@@ -15,4 +15,8 @@ public enum SingletonDemo3 {
     public void setName(String name) {
         this.name = name;
     }
+
+    public SingletonDemo3 getInstance() {
+        return INSTANCE;
+    }
 }

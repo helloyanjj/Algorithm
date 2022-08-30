@@ -1,4 +1,5 @@
 package company;
+
 import java.util.*;
 
 //x = b·s(x)^a + c
@@ -15,16 +16,16 @@ import java.util.*;
 
 public class ali {
 
-    public static void xxx(int a,int b, int c) {
+    public static void xxx(int a, int b, int c) {
         int s = 0;
         int mm = 0;
-        for (int x=1;x<1000000000;x++){
+        for (int x = 1; x < 1000000000; x++) {
             s = sum(x);
             mm = s;
-            for (int i=0;i<a-1;i++) {
-                mm = mm*s;
+            for (int i = 0; i < a - 1; i++) {
+                mm = mm * s;
             }
-            if (x==(b*mm+c)) {
+            if (x == (b * mm + c)) {
                 System.out.print(x + " ");
             }
 
@@ -37,7 +38,7 @@ public class ali {
         int b = scanner.nextInt();
         int c = scanner.nextInt();
 
-        ali.xxx(a,b,c);
+        ali.xxx(a, b, c);
 
     }
 

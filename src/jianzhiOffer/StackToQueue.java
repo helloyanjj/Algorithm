@@ -29,20 +29,20 @@ public class StackToQueue {
 
 
     }
-    public void print(){
+
+    public void print() {
         System.out.println(stack1);
         System.out.println(stack2);
     }
 
 
-
-
-    public  void add(int a){
+    public void add(int a) {
         stack1.push(a);
     }
-    public void delete(){
+
+    public void delete() {
         if (stack2.size() <= 0) {
-            while (stack1.size()>0){
+            while (stack1.size() > 0) {
                 int a = stack1.pop();
                 stack2.push(a);
             }

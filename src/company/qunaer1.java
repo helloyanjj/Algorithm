@@ -14,7 +14,7 @@ public class qunaer1 {
         int n = a.length;
         int[] m = new int[n];
         int i = 0;
-        for (String ss:a){
+        for (String ss : a) {
             int d = Integer.valueOf(ss);
             m[i++] = d;
         }

@@ -7,15 +7,15 @@ import java.util.Scanner;
  */
 public class wangyi3 {
 
-    public static void resolve (int n,int m,int[][]a) {
+    public static void resolve(int n, int m, int[][] a) {
         int num = 0;
-        for (int i=0;i<n;i++) {
-            if (a[i][0]==1) {
+        for (int i = 0; i < n; i++) {
+            if (a[i][0] == 1) {
                 num++;
             }
 
         }
-        if (num>(n/2)) {
+        if (num > (n / 2)) {
             System.out.println(6);
 
         }
@@ -27,11 +27,11 @@ public class wangyi3 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int m = scanner.nextInt();
-        int [][]a = new int[m][2];
-        for (int i=0;i<n;i++) {
+        int[][] a = new int[m][2];
+        for (int i = 0; i < n; i++) {
             a[i][0] = scanner.nextInt();
             a[i][1] = scanner.nextInt();
         }
-        resolve(n,m,a);
+        resolve(n, m, a);
     }
 }

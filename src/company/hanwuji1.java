@@ -19,17 +19,15 @@ public class hanwuji1 {
         }
 
 
-
-
-        char []time = time12.toCharArray();
+        char[] time = time12.toCharArray();
         int len = time.length;
-        if (time[len-2] == 'A') {
-            return time12.substring(0,len-2);
-        } else if (time[len-2] == 'P') {
-            int a = Integer.valueOf(time12.substring(0,2));
+        if (time[len - 2] == 'A') {
+            return time12.substring(0, len - 2);
+        } else if (time[len - 2] == 'P') {
+            int a = Integer.valueOf(time12.substring(0, 2));
             a = a + 12;
 
-            return a+time12.substring(2,len-2);
+            return a + time12.substring(2, len - 2);
 
 
         }

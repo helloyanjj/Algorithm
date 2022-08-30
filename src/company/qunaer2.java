@@ -12,8 +12,8 @@ public class qunaer2 {
         String s = scanner.nextLine();
         String[] a = s.split(" ");
         int n = a.length;
-        int[]m = new int[n];
-        for (int i=0;i<n;i++){
+        int[] m = new int[n];
+        for (int i = 0; i < n; i++) {
             String q = scanner.next();
             m[i] = scanner.nextInt();
         }

@@ -1,8 +1,10 @@
 package company;
+
 import java.util.Scanner;
 
 public class Main01 {
     private static int count = 0;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int p = scanner.nextInt();
@@ -11,7 +13,7 @@ public class Main01 {
         System.out.println(solution(p, q, r));
     }
 
-    public static int solution(int np, int nq, int nr){
+    public static int solution(int np, int nq, int nr) {
         char p = 'P';
         char q = 'Q';
         char r = 'R';
@@ -47,8 +49,8 @@ public class Main01 {
             }
 
             char[] temps = str.toCharArray();
-            for (int i = 0; i < temps.length-1; i++) {
-                if (temps[i] == temps[i + 1]){
+            for (int i = 0; i < temps.length - 1; i++) {
+                if (temps[i] == temps[i + 1]) {
                     count++;
                     break;
                 }
