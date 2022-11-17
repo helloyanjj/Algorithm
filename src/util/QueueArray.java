@@ -1,12 +1,12 @@
 package util;
 
-public class ArrayQueue {
+public class QueueArray {
     private String[] items;
     private int n = 0;
     private int head = 0;
     private int tail = 0;
 
-    public ArrayQueue(int n) {
+    public QueueArray(int n) {
         items = new String[n];
         this.n = n;
     }

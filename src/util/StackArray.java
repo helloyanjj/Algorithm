@@ -2,12 +2,12 @@ package util;
 
 import java.util.Arrays;
 
-public class ArrayStack {
+public class StackArray {
     private String[] stack;
     private int count;
     private int n;
 
-    public ArrayStack(int n) {
+    public StackArray(int n) {
         this.stack = new String[n];
         this.n = n;
         this.count = 0;
@@ -38,13 +38,13 @@ public class ArrayStack {
     }
 
     public static void main(String[] args) {
-        ArrayStack arrayStack = new ArrayStack(1);
-        System.out.println(arrayStack.push("yan"));
-        arrayStack.push("jun");
-        arrayStack.push("jie");
-        System.out.println(arrayStack.pop());
-        System.out.println(arrayStack.pop());
-        System.out.println(arrayStack.pop());
+        StackArray stackArray = new StackArray(1);
+        System.out.println(stackArray.push("yan"));
+        stackArray.push("jun");
+        stackArray.push("jie");
+        System.out.println(stackArray.pop());
+        System.out.println(stackArray.pop());
+        System.out.println(stackArray.pop());
 
     }
 }
