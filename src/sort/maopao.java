@@ -1,4 +1,4 @@
-package paixu;
+package sort;
 
 /**
  * created by yanjunjie
