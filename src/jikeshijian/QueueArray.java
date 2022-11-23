@@ -1,6 +1,9 @@
-package util;
+package jikeshijian;
 
 public class QueueArray {
+    /**
+     * 数组实现队列
+     */
     private String[] items;
     private int n = 0;
     private int head = 0;

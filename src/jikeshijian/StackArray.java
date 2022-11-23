@@ -1,8 +1,12 @@
-package util;
+package jikeshijian;
 
 import java.util.Arrays;
 
 public class StackArray {
+    /**
+     * 数组实现栈
+     */
+
     private String[] stack;
     private int count;
     private int n;
