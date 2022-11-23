@@ -8,6 +8,9 @@ public class 反转链表 {
         ListNode() {
         }
 
+
+
+
         ListNode(int val) {
             this.val = val;
         }
